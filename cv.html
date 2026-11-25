@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CV — Yassin Wannassi | Développeur Web Full-Stack</title>
+  <meta name="description" content="Curriculum Vitae de Yassin Wannassi, Développeur Web Full-Stack — Étudiant en Licence MDW à l'ISET Sidi Bouzid.">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root{
+      --bg:#070511;
+      --paper:#ffffff;
+      --side:#0e1429;
+      --ink:#141828;
+      --mut:#525b76;
+      --line:#e3e7f2;
+      --cyan:#00d4e6;
+      --pink:#ff3b9a;
+      --violet:#8a3ffc;
+      --sunset:#ff8a4c;
+      --g:linear-gradient(135deg,#00f0ff 0%,#b44aff 48%,#ff3b9a 80%,#ffb86c 100%);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Sora,system-ui,-apple-system,sans-serif;
+      background:
+        radial-gradient(650px circle at 10% 10%,rgba(0,240,255,.11),transparent 60%),
+        radial-gradient(650px circle at 90% 20%,rgba(255,59,154,.12),transparent 60%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.5;
+      padding:88px 18px 48px;
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+
+    /* top bar */
+    .topbar{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      background:rgba(9,5,20,.88);backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,59,154,.2);
+      padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    }
+    .tb-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:.95rem}
+    .tb-brand img{height:36px;width:auto}
+    .tb-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .tbtn{
+      display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:99px;
+      font-family:inherit;font-size:.84rem;font-weight:600;cursor:pointer;transition:.25s;border:0;
+    }
+    .tbtn.o{background:rgba(255,255,255,.07);color:#f3f0ff;border:1px solid rgba(255,255,255,.2)}
+    .tbtn.o:hover{border-color:var(--cyan);color:var(--cyan)}
+    .tbtn.p{background:var(--g);color:#fff;box-shadow:0 6px 22px rgba(255,59,154,.35)}
+    .tbtn.p:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,240,255,.35)}
+
+    /* A4 sheet */
+    .sheet{
+      width:min(210mm,100%);
+      min-height:297mm;
+      margin:auto;
+      background:var(--paper);
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 28px 90px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);
+      display:grid;
+      grid-template-columns:72mm 1fr;
+    }
+
+    /* Dark CV preview mode */
+    body.dark-cv .sheet{
+      background:#0e0a1d;color:#ede9fe;
+      box-shadow:0 28px 90px rgba(0,0,0,.75),0 0 40px rgba(255,59,154,.18),0 0 0 1px rgba(255,59,154,.3);
+    }
+    body.dark-cv .main{background:#0e0a1d}
+    body.dark-cv .sec-title{color:#fff;border-color:rgba(255,59,154,.28)}
+    body.dark-cv .item-head h3,body.dark-cv .proj-card h3{color:#fff}
+    body.dark-cv .item-sub,body.dark-cv .item p,body.dark-cv .proj-card p,body.dark-cv .summary{color:#b6aed6}
+    body.dark-cv .proj-card,body.dark-cv .cert-row{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
+    body.dark-cv .tag{background:rgba(0,240,255,.12);color:#8df6ff;border-color:rgba(0,240,255,.25)}
+    body.dark-cv .hdr{border-color:rgba(255,255,255,.1)}
+
+    /* Sidebar */
+    .side{
+      background:linear-gradient(175deg,#0c1024 0%,#140b29 65%,#1c0c24 100%);
+      color:#f3f0ff;
+      padding:26px 20px;
+      display:flex;flex-direction:column;gap:20px;
+      position:relative;
+    }
+    .side::after{
+      content:"";position:absolute;top:0;right:0;bottom:0;width:3px;
+      background:var(--g);
+    }
+    .avatar-wrap{
+      width:118px;height:118px;margin:4px auto 0;border-radius:50%;padding:3.5px;
+      background:var(--g);box-shadow:0 8px 26px rgba(255,59,154,.3);
+    }
+    .avatar-wrap img{
+      width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top;
+      border:3px solid #0e1024;display:block;
+    }
+    .s-block h2{
+      font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;
+      color:#ff94c8;margin-bottom:10px;padding-bottom:5px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .contact-list{display:grid;gap:8px;font-size:.75rem;color:#dcd6f7}
+    .contact-list a,.contact-list div{display:flex;align-items:flex-start;gap:9px;word-break:break-word}
+    .contact-list i{color:#00e5ff;width:14px;margin-top:3px;flex:none}
+    .contact-list a:hover{color:#fff;text-decoration:underline}
+
+    .skill-group{margin-bottom:10px}
+    .skill-group:last-child{margin-bottom:0}
+    .skill-group strong{display:block;font-size:.72rem;color:#ffb86c;margin-bottom:5px;font-weight:600}
+    .pill-wrap{display:flex;flex-wrap:wrap;gap:5px}
+    .spill{
+      font-size:.69rem;padding:3px 8px;border-radius:6px;
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);
+      color:#f3f0ff;
+    }
+
+    .lang-list{display:grid;gap:7px;font-size:.75rem}
+    .lang-row{display:flex;justify-content:space-between;align-items:center}
+    .lang-row span{color:#b7afd9;font-size:.7rem}
+
+    .soft-list{display:grid;gap:5px;font-size:.74rem;color:#dcd6f7;list-style:none}
+    .soft-list li::before{content:"▸ ";color:#ff3b9a;font-weight:700}
+
+    /* Main content */
+    .main{padding:26px 28px;display:flex;flex-direction:column;gap:16px}
+    .hdr{padding-bottom:14px;border-bottom:2px solid var(--line)}
+    .hdr h1{
+      font-size:1.95rem;font-weight:800;letter-spacing:-.02em;line-height:1.1;
+      background:linear-gradient(135deg,#0f172a 0%,#6d28d9 60%,#db2777 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    body.dark-cv .hdr h1{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hdr .role{font-size:.96rem;font-weight:600;color:#c02678;margin-top:4px}
+    body.dark-cv .hdr .role{color:#00f0ff}
+    .summary{font-size:.79rem;color:var(--mut);margin-top:8px;line-height:1.55}
+
+    .sec-title{
+      display:flex;align-items:center;gap:8px;
+      font-size:.86rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+      color:#141828;padding-bottom:5px;margin-bottom:10px;
+      border-bottom:1.5px solid var(--line);
+    }
+    .sec-title i{color:#db2777;font-size:.85rem}
+
+    .timeline{display:grid;gap:11px}
+    .item{position:relative;padding-left:13px;border-left:2px solid #e2d9f8}
+    .item::before{
+      content:"";position:absolute;left:-5px;top:5px;width:8px;height:8px;border-radius:50%;
+      background:linear-gradient(135deg,#00d4e6,#ff3b9a);
+    }
+    .item-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+    .item-head h3{font-size:.85rem;font-weight:700;color:var(--ink)}
+    .date{font-size:.71rem;font-weight:600;color:#7c3aed;white-space:nowrap}
+    body.dark-cv .date{color:#ffb86c}
+    .item-sub{font-size:.76rem;font-weight:600;color:var(--mut);margin:1px 0 3px}
+    .item p{font-size:.75rem;color:var(--mut);line-height:1.45}
+
+    .proj-grid{display:grid;gap:9px}
+    .proj-card{
+      padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fafbff;
+    }
+    .proj-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+    .proj-card h3{font-size:.83rem;font-weight:700;color:var(--ink)}
+    .proj-url{font-size:.69rem;font-weight:600;color:#0284c7}
+    body.dark-cv .proj-url{color:#00f0ff}
+    .proj-card p{font-size:.74rem;color:var(--mut);line-height:1.42}
+    .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+    .tag{
+      font-size:.66rem;font-weight:600;padding:2px 7px;border-radius:99px;
+      background:#eef2ff;color:#4338ca;border:1px solid #dde3ff;
+    }
+
+    .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .cert-row{
+      padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#fafbff;
+    }
+    .cert-row strong{display:block;font-size:.75rem;font-weight:700}
+    .cert-row span{display:block;font-size:.69rem;color:var(--mut);margin-top:1px}
+
+    @media(max-width:780px){
+      body{padding:110px 10px 30px}
+      .sheet{grid-template-columns:1fr;min-height:auto}
+      .side::after{top:auto;left:0;right:0;bottom:0;width:auto;height:3px}
+      .cert-grid{grid-template-columns:1fr}
+    }
+
+    @page{size:A4;margin:0}
+    @media print{
+      *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      html,body{background:#fff!important;padding:0!important;margin:0!important;min-height:0!important}
+      .topbar{display:none!important}
+      .sheet{
+        width:210mm!important;height:297mm!important;min-height:297mm!important;
+        margin:0!important;border-radius:0!important;box-shadow:none!important;
+        grid-template-columns:70mm 1fr!important;
+      }
+      body.dark-cv .sheet{background:#fff!important;color:#141828!important}
+      body.dark-cv .main{background:#fff!important}
+      body.dark-cv .hdr h1{
+        background:linear-gradient(135deg,#0f172a 0%,#6d28d9 60%,#db2777 100%)!important;
+        -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+      }
+      body.dark-cv .hdr .role{color:#c02678!important}
+      body.dark-cv .sec-title{color:#141828!important;border-color:#e3e7f2!important}
+      body.dark-cv .item-head h3,body.dark-cv .proj-card h3{color:#141828!important}
+      body.dark-cv .item-sub,body.dark-cv .item p,body.dark-cv .proj-card p,body.dark-cv .summary{color:#525b76!important}
+      body.dark-cv .proj-card,body.dark-cv .cert-row{background:#fafbff!important;border-color:#e3e7f2!important}
+      body.dark-cv .tag{background:#eef2ff!important;color:#4338ca!important;border-color:#dde3ff!important}
+      body.dark-cv .date{color:#7c3aed!important}
+      body.dark-cv .proj-url{color:#0284c7!important}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="tb-brand" href="index.html">
+      <img src="assets/logo-mark.png" alt="Logo YW">
+      <span>CV · Yassin Wannassi</span>
+    </a>
+    <div class="tb-actions">
+      <a class="tbtn o" href="index.html"><i class="fa-solid fa-arrow-left"></i> Portfolio</a>
+      <button class="tbtn o" id="theme-btn" type="button"><i class="fa-solid fa-circle-half-stroke"></i> Thème sombre / clair</button>
+      <button class="tbtn p" onclick="window.print()" type="button"><i class="fa-solid fa-file-arrow-down"></i> Télécharger / Imprimer PDF</button>
+    </div>
+  </div>
+
+  <main class="sheet">
+    <aside class="side">
+      <div class="avatar-wrap">
+        <img src="assets/photos/p3.jpg" alt="Yassin Wannassi">
+      </div>
+
+      <section class="s-block">
+        <h2>Contact</h2>
+        <div class="contact-list">
+          <div><i class="fa-solid fa-location-dot"></i><span>Sidi Bouzid, Tunisie</span></div>
+          <a href="tel:2787677"><i class="fa-solid fa-phone"></i><span>2787677</span></a>
+          <a href="mailto:yassinwannassi01@gmail.com"><i class="fa-solid fa-envelope"></i><span>yassinwannassi01@gmail.com</span></a>
+          <a href="https://portfolio-yassinwns.onrender.com/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i><span>portfolio-yassinwns.onrender.com</span></a>
+          <a href="https://github.com/yassin-wns" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span>github.com/yassin-wns</span></a>
+          <a href="https://www.linkedin.com/in/yassin-wannassi-205972323/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>LinkedIn · Yassin Wannassi</span></a>
+        </div>
+      </section>
+
+      <section class="s-block">
+        <h2>Compétences</h2>
+        <div class="skill-group">
+          <strong>Front-End</strong>
+          <div class="pill-wrap">
+            <span class="spill">HTML5</span>
+            <span class="spill">CSS3</span>
+            <span class="spill">JavaScript</span>
+            <span class="spill">TypeScript</span>
+            <span class="spill">Angular</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Back-End &amp; Data</strong>
+          <div class="pill-wrap">
+            <span class="spill">PHP · PDO</span>
+            <span class="spill">Symfony</span>
+            <span class="spill">Java</span>
+            <span class="spill">Spring Boot</span>
+            <span class="spill">Python</span>
+            <span class="spill">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Outils &amp; Méthodes</strong>
+          <div class="pill-wrap">
+            <span class="spill">Git / GitHub</span>
+            <span class="spill">API REST</span>
+            <span class="spill">Responsive UI</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-block">
+        <h2>Langues</h2>
+        <div class="lang-list">
+          <div class="lang-row"><strong>Arabe</strong><span>Langue maternelle</span></div>
+          <div class="lang-row"><strong>Français</strong><span>Courant</span></div>
+          <div class="lang-row"><strong>Anglais</strong><span>Professionnel</span></div>
+        </div>
+      </section>
+
+      <section class="s-block">
+        <h2>Atouts</h2>
+        <ul class="soft-list">
+          <li>Leadership &amp; gestion de projet</li>
+          <li>Esprit entrepreneurial</li>
+          <li>Travail en équipe &amp; autonomie</li>
+          <li>Veille technologique continue</li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="main">
+      <header class="hdr">
+        <h1>Yassin Wannassi</h1>
+        <p class="role">Développeur Web Full-Stack · Étudiant en Licence MDW (MDW 32)</p>
+        <p class="summary">
+          Étudiant en 3ᵉ année Licence Multimédia et Développement Web à l’ISET de Sidi Bouzid (Promotion 2026), passionné par la conception d’applications web modernes, de l’interface utilisateur à la base de données. Fort de deux stages en entreprise (La Poste Tunisienne et Tunisie Télécom) et de projets concrets déployés, je recherche une opportunité de PFE / collaboration.
+        </p>
+      </header>
+
+      <section>
+        <h2 class="sec-title"><i class="fa-solid fa-briefcase"></i> Expériences &amp; Stages</h2>
+        <div class="timeline">
+          <div class="item">
+            <div class="item-head">
+              <h3>Stagiaire Développeur Web — La Poste Tunisienne</h3>
+              <span class="date">05/01/2026 – 30/01/2026</span>
+            </div>
+            <div class="item-sub">Bureau de Poste de Sidi Ali Ben Aoun (9120) · Stage de perfectionnement</div>
+            <p>Conception et développement de la plateforme web d’information multilingue <strong>SABO Poste 2.0</strong> (FR / AR / EN) intégrant les services, horaires officiels, guides D17 et un espace d’administration.</p>
+          </div>
+          <div class="item">
+            <div class="item-head">
+              <h3>Stagiaire — Tunisie Télécom</h3>
+              <span class="date">06/01/2025 – 01/02/2025</span>
+            </div>
+            <div class="item-sub">Direction Régionale de Sidi Bouzid · Stage de formation</div>
+            <p>Immersion professionnelle au sein des services techniques et administratifs, découverte des infrastructures réseau et des flux opérationnels.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sec-title"><i class="fa-solid fa-graduation-cap"></i> Formation</h2>
+        <div class="timeline">
+          <div class="item">
+            <div class="item-head">
+              <h3>Licence en Multimédia &amp; Développement Web (MDW)</h3>
+              <span class="date">2023 – 2026</span>
+            </div>
+            <div class="item-sub">Institut Supérieur des Études Technologiques (ISET) de Sidi Bouzid · Classe MDW 32</div>
+            <p>Développement web full-stack (TypeScript, Angular, PHP, Symfony, Java, Spring Boot), bases de données MySQL, programmation graphique et préparation du Projet de Fin d’Études (PFE 2026).</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sec-title"><i class="fa-solid fa-code"></i> Projets Clés</h2>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-top">
+              <h3>SBZ Inscription — Gestion de Scolarité ISET</h3>
+              <a class="proj-url" href="https://github.com/yassin-wns/sbz-inscription" target="_blank" rel="noopener">github.com/yassin-wns/sbz-inscription</a>
+            </div>
+            <p>Application de gestion des inscriptions : tableau de bord analytique, suivi des dossiers (validés, en attente, refusés), répartition par département/niveau et export CSV.</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">Dashboard</span><span class="tag">Export CSV</span></div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <h3>MiniCRM Pro — Gestion de Relation Client</h3>
+              <a class="proj-url" href="https://github.com/yassin-wns/mini-crm" target="_blank" rel="noopener">github.com/yassin-wns/mini-crm</a>
+            </div>
+            <p>Système CRM permettant le suivi des clients actifs, la gestion des prospects et la création/édition complète des fiches clients via une interface d’administration claire.</p>
+            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CRM</span></div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <h3>SABO Poste 2.0 — Plateforme Bureau de Poste</h3>
+              <a class="proj-url" href="https://github.com/yassin-wns/sabo-poste" target="_blank" rel="noopener">github.com/yassin-wns/sabo-poste</a>
+            </div>
+            <p>Portail citoyen multilingue (Français, Arabe, Anglais) pour le Bureau de Poste de Ben Aoun : horaires en direct, services postaux, guides D17 et gestion admin.</p>
+            <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sec-title"><i class="fa-solid fa-award"></i> Certifications &amp; Formations</h2>
+        <div class="cert-grid">
+          <div class="cert-row">
+            <strong>JavaScript Essentials 1</strong>
+            <span>Cisco Networking Academy · Juillet 2025</span>
+          </div>
+          <div class="cert-row">
+            <strong>Python Essentials 1</strong>
+            <span>Cisco Networking Academy · Juillet 2025</span>
+          </div>
+          <div class="cert-row">
+            <strong>Innovation Camp (×2)</strong>
+            <span>INJAZ Tunisia · Nov. 2025 &amp; Avril 2026</span>
+          </div>
+          <div class="cert-row">
+            <strong>Entrepreneuriat Vert &amp; Durable</strong>
+            <span>ATEJ × WeWorld GVC (Green UP!) · Déc. 2025</span>
+          </div>
+          <div class="cert-row" style="grid-column:1/-1">
+            <strong>The Art of Leadership</strong>
+            <span>ISET Sidi Bouzid (Club CDS) · Leadership, communication &amp; gestion stratégique · Nov. 2024</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const btn=document.getElementById('theme-btn');
+    btn.addEventListener('click',()=>document.body.classList.toggle('dark-cv'));
+  </script>
+</body>
+</html>
