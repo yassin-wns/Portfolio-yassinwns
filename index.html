@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yassin Wannassi — Développeur Web Full-Stack</title>
+  <meta name="description" content="Portfolio de Yassin Wannassi, étudiant en Licence MDW à l'ISET Sidi Bouzid et développeur web full-stack (TypeScript, PHP, Angular, Symfony, Java).">
+  <meta property="og:title" content="Yassin Wannassi — Développeur Web Full-Stack">
+  <meta property="og:description" content="Projets (SBZ Inscription, MiniCRM Pro, SABO Poste 2.0), stages et certifications.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo-mark.png">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <div id="intro">
+    <div>
+      <div class="i-box"><span class="ring"></span><img class="i-logo" src="assets/logo-mark.png" alt="Logo YW"></div>
+      <h1 class="i-name">Yassin Wannassi</h1>
+      <p class="i-sub">Portfolio · Développeur Web</p>
+      <div class="bar"><i></i></div>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="wrap">
+      <a href="#hero" class="brand"><img src="assets/logo-mark.png" alt="Logo YW">Yassin<span class="grad">.</span></a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="links">
+        <a href="#about">À propos</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
+        <a href="#certifs">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a href="profile.html" class="btn"><i class="fa-regular fa-heart"></i> Profil</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-bg-slides" aria-hidden="true">
+      <div class="bg-slide on" style="background-image:url('assets/photos/p1.jpg')"></div>
+      <div class="bg-slide" style="background-image:url('assets/photos/p2.jpeg')"></div>
+      <div class="bg-slide" style="background-image:url('assets/photos/p3.jpg')"></div>
+      <div class="bg-slide" style="background-image:url('assets/photos/p4.jpeg')"></div>
+      <div class="bg-slide" style="background-image:url('assets/photos/p5.jpg')"></div>
+    </div>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="wrap hero-wrap">
+      <div class="hero-copy">
+        <span class="badge-status"><i class="dot"></i> Ouvert aux opportunités · PFE 2026</span>
+        <span class="hi">Bonjour, je suis</span>
+        <h1 class="grad">Yassin Wannassi</h1>
+        <div class="typed" data-w='["Développeur Web Full-Stack","TypeScript · PHP · Angular · Java","Étudiant MDW 32 · ISET Sidi Bouzid"]'></div>
+        <p>Je conçois des applications web modernes, de l’interface à la base de données. Je prépare actuellement mon Projet de Fin d’Études (PFE).</p>
+        <div class="cta">
+          <a href="#projets" class="btn">Voir mes projets <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="#certifs" class="btn o"><i class="fa-solid fa-award"></i> Certifications &amp; Stages</a>
+          <a href="#contact" class="btn o">Me contacter</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hv-frame">
+          <div class="hv-slides">
+            <img class="hv-img on" src="assets/photos/p1.jpg" alt="Yassin Wannassi">
+            <img class="hv-img" src="assets/photos/p2.jpeg" alt="Yassin Wannassi">
+            <img class="hv-img" src="assets/photos/p3.jpg" alt="Yassin Wannassi">
+            <img class="hv-img" src="assets/photos/p4.jpeg" alt="Yassin Wannassi">
+            <img class="hv-img" src="assets/photos/p5.jpg" alt="Yassin Wannassi">
+          </div>
+          <div class="hv-dots" aria-label="Changer de photo">
+            <button class="on" aria-label="Photo 1"></button>
+            <button aria-label="Photo 2"></button>
+            <button aria-label="Photo 3"></button>
+            <button aria-label="Photo 4"></button>
+            <button aria-label="Photo 5"></button>
+          </div>
+        </div>
+        <div class="hv-chip c1"><i class="fa-solid fa-code"></i> Full-Stack Dev</div>
+        <div class="hv-chip c2"><i class="fa-solid fa-graduation-cap"></i> ISET Sidi Bouzid</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="photo rv"><img src="assets/photos/p1.jpg" alt="Yassin Wannassi"></div>
+      <div class="rv">
+        <h2>À <span>propos</span></h2>
+        <p class="sub">Étudiant en Licence MDW (classe MDW 32) à l’ISET Sidi Bouzid, diplômé en 2026.</p>
+        <p class="bio">Passionné par le développement web, je transforme des idées en produits concrets : tableaux de bord interactifs, applications de gestion, back-ends PHP/Symfony et plateformes institutionnelles. Mes stages chez Tunisie Télécom et La Poste Tunisienne ainsi que mes formations en leadership et entrepreneuriat renforcent ma rigueur sur le terrain.</p>
+        <div class="stats">
+          <div><b data-n="3">0</b><small>Projets</small></div>
+          <div><b data-n="2">0</b><small>Stages</small></div>
+          <div><b data-n="6">0</b><small>Certifications</small></div>
+        </div>
+        <div class="chips">
+          <span>HTML5 / CSS3</span>
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+          <span>Angular</span>
+          <span>PHP · PDO</span>
+          <span>Symfony</span>
+          <span>MySQL</span>
+          <span>Java · Spring Boot</span>
+          <span>Python</span>
+          <span>Git / GitHub</span>
+          <span class="soft">Leadership</span>
+          <span class="soft">Entrepreneuriat</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours">
+    <div class="wrap">
+      <h2 class="rv">Mon <span>parcours</span></h2>
+      <p class="sub rv">Formation académique, stages en entreprise et engagements</p>
+      <div class="tl rv">
+        <div>
+          <small>2026 · En cours</small>
+          <h3>Projet de Fin d’Études (PFE)</h3>
+          <p>Conception, architecture et réalisation d’une application web complète de bout en bout.</p>
+        </div>
+        <div>
+          <small>Janvier 2026 (05/01 – 30/01)</small>
+          <h3>Stage — La Poste Tunisienne</h3>
+          <p>Bureau de poste Sidi Ali Ben Aoun (9120) · Conception et développement de la plateforme web SABO Poste 2.0.</p>
+        </div>
+        <div>
+          <small>Promotion 2026</small>
+          <h3>Licence MDW — Développement Web</h3>
+          <p>ISET Sidi Bouzid (MDW 32) · TypeScript, Angular, PHP, Symfony, Java, Spring Boot et bases de données.</p>
+        </div>
+        <div>
+          <small>Décembre 2025 &amp; Avril 2026</small>
+          <h3>Entrepreneuriat &amp; Innovation — INJAZ Tunisia &amp; ATEJ</h3>
+          <p>Participation aux programmes Innovation Camp (INJAZ Tunisia) et formation en entrepreneuriat vert et durable (Projet DYNAMO / Green UP!).</p>
+        </div>
+        <div>
+          <small>Juillet 2025</small>
+          <h3>Cisco Networking Academy</h3>
+          <p>Certifications vérifiées en JavaScript Essentials 1 et Python Essentials 1.</p>
+        </div>
+        <div>
+          <small>Janvier 2025 (06/01 – 01/02)</small>
+          <h3>Stage — Tunisie Télécom</h3>
+          <p>Direction Régionale de Sidi Bouzid · Stage de formation au sein des services techniques et administratifs.</p>
+        </div>
+        <div>
+          <small>Novembre 2024</small>
+          <h3>Formation « The Art of Leadership »</h3>
+          <p>ISET Sidi Bouzid (Club CDS) · Développement des compétences en leadership, communication et gestion stratégique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets">
+    <div class="wrap">
+      <h2 class="rv">Mes <span>projets</span></h2>
+      <p class="sub rv">Applications réelles conçues et publiées sur GitHub</p>
+      <div class="grid proj-grid" id="proj-grid">
+        <article class="card proj rv">
+          <div class="proj-shot view-doc" data-img="assets/projects/sbz-inscription.jpg" data-title="SBZ Inscription — ISET Sidi Bouzid" data-meta="Gestion de la scolarité · TypeScript · Tableau de bord, dossiers étudiants et export CSV">
+            <img src="assets/projects/sbz-inscription.jpg" alt="Capture d'écran SBZ Inscription" loading="lazy">
+            <span class="shot-zoom"><i class="fa-solid fa-expand"></i></span>
+          </div>
+          <div class="proj-body">
+            <h3>SBZ Inscription</h3>
+            <p>Système de gestion de la scolarité pour l’ISET Sidi Bouzid : tableau de bord analytique, suivi des dossiers (validés, en attente, refusés), export CSV et espace administration.</p>
+            <div class="tags"><em>TypeScript</em><em>Dashboard</em><em>Scolarité</em></div>
+            <div class="proj-actions">
+              <a class="proj-link" href="https://github.com/yassin-wns/sbz-inscription" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj rv">
+          <div class="proj-shot view-doc" data-img="assets/projects/mini-crm.png" data-title="MiniCRM Pro — Gestion Clients" data-meta="CRM Enterprise · PHP · Suivi des clients actifs, prospects et fiches détaillées">
+            <img src="assets/projects/mini-crm.png" alt="Capture d'écran MiniCRM Pro" loading="lazy">
+            <span class="shot-zoom"><i class="fa-solid fa-expand"></i></span>
+          </div>
+          <div class="proj-body">
+            <h3>MiniCRM Pro</h3>
+            <p>Application CRM de gestion client : vue d’ensemble des comptes actifs, suivi des prospects, ajout, consultation et édition de fiches clients en temps réel.</p>
+            <div class="tags"><em>PHP</em><em>MySQL</em><em>CRM</em></div>
+            <div class="proj-actions">
+              <a class="proj-link" href="https://github.com/yassin-wns/mini-crm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj rv">
+          <div class="proj-shot view-doc" data-img="assets/projects/sabo-poste.jpg" data-title="SABO Poste 2.0 — Bureau de Poste Ben Aoun" data-meta="Plateforme d'information multilingue (FR / AR / EN) · Développée lors du stage à La Poste Tunisienne">
+            <img src="assets/projects/sabo-poste.jpg" alt="Capture d'écran SABO Poste 2.0" loading="lazy">
+            <span class="shot-zoom"><i class="fa-solid fa-expand"></i></span>
+          </div>
+          <div class="proj-body">
+            <h3>SABO Poste 2.0</h3>
+            <p>Plateforme web d’information du Bureau de Poste de Sidi Ali Ben Aoun (9120) : services, horaires officiels, guides D17, interface multilingue (FR / العربية / EN) et espace Admin.</p>
+            <div class="tags"><em>HTML5</em><em>CSS3</em><em>JavaScript</em></div>
+            <div class="proj-actions">
+              <a class="proj-link" href="https://github.com/yassin-wns/sabo-poste" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="rv" style="margin-top:34px">
+        <a class="btn o" href="https://github.com/yassin-wns" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Voir mon profil GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="certifs">
+    <div class="wrap">
+      <h2 class="rv">Certifications, Stages <span>&amp; Formations</span></h2>
+      <p class="sub rv">Diplômes techniques vérifiés, attestations de stage et certificats de participation</p>
+      <div class="filters rv" role="tablist" aria-label="Filtrer les certifications">
+        <button class="fbtn on" data-cfilter="all">Tous (8)</button>
+        <button class="fbtn" data-cfilter="tech">Tech &amp; Code</button>
+        <button class="fbtn" data-cfilter="stage">Stages</button>
+        <button class="fbtn" data-cfilter="soft">Leadership &amp; Entrepreneuriat</button>
+      </div>
+      <div class="grid" id="cert-grid">
+        <article class="card cert rv" data-ccat="tech">
+          <img src="assets/certs/js-badge.png" alt="Badge JavaScript Essentials 1">
+          <div>
+            <span class="c-tag">Cisco Networking Academy</span>
+            <h3>JavaScript Essentials 1</h3>
+            <p>Délivrée le 7 juillet 2025</p>
+            <a href="assets/certs/js-certificate.pdf" target="_blank" rel="noopener">Voir le certificat PDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="tech">
+          <img src="assets/certs/python-badge.png" alt="Badge Python Essentials 1">
+          <div>
+            <span class="c-tag">Cisco Networking Academy</span>
+            <h3>Python Essentials 1</h3>
+            <p>Délivrée le 6 juillet 2025</p>
+            <a href="assets/certs/python-certificate.pdf" target="_blank" rel="noopener">Voir le certificat PDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="stage">
+          <img class="doc-thumb" src="assets/certs/stage-poste.jpg" alt="Attestation de stage La Poste Tunisienne">
+          <div>
+            <span class="c-tag stage">La Poste Tunisienne</span>
+            <h3>Attestation de Stage</h3>
+            <p>Bureau de Poste Ben Aoun · 05/01/2026 – 30/01/2026</p>
+            <button class="view-doc" data-img="assets/certs/stage-poste.jpg" data-title="Attestation de Stage — La Poste Tunisienne" data-meta="Bureau de Poste Ben Aoun · Du 05/01/2026 au 30/01/2026">Voir l’attestation <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="stage">
+          <img class="doc-thumb" src="assets/certs/stage-tt.jpg" alt="Attestation de stage Tunisie Télécom">
+          <div>
+            <span class="c-tag stage">Tunisie Télécom</span>
+            <h3>Attestation de Stage</h3>
+            <p>Direction Régionale de Sidi Bouzid · 06/01/2025 – 01/02/2025</p>
+            <button class="view-doc" data-img="assets/certs/stage-tt.jpg" data-title="Attestation de Stage — Tunisie Télécom" data-meta="Direction Régionale de Sidi Bouzid · Du 06/01/2025 au 01/02/2025">Voir l’attestation <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="soft">
+          <img class="doc-thumb" src="assets/certs/cert-injaz-2.jpg" alt="Certificat INJAZ Tunisia Avril 2026">
+          <div>
+            <span class="c-tag soft">INJAZ Tunisia</span>
+            <h3>Innovation Camp</h3>
+            <p>Certificat de participation · Avril 2026</p>
+            <button class="view-doc" data-img="assets/certs/cert-injaz-2.jpg" data-title="INJAZ Tunisia — Innovation Camp" data-meta="Certificat de participation · Avril 2026">Voir le certificat <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="soft">
+          <img class="doc-thumb" src="assets/certs/cert-atej-greenup.jpg" alt="Certificat ATEJ Entrepreneuriat vert et durable">
+          <div>
+            <span class="c-tag soft">ATEJ × WeWorld GVC</span>
+            <h3>Entrepreneuriat Vert &amp; Durable</h3>
+            <p>Projet DYNAMO : Green UP! · 04 décembre 2025</p>
+            <button class="view-doc" data-img="assets/certs/cert-atej-greenup.jpg" data-title="ATEJ × WeWorld GVC — Entrepreneuriat Vert &amp; Durable" data-meta="Projet DYNAMO : Initiative Green UP! · ISET Sidi Bouzid · 04/12/2025">Voir le certificat <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="soft">
+          <img class="doc-thumb" src="assets/certs/cert-injaz-1.jpg" alt="Certificat INJAZ Tunisia">
+          <div>
+            <span class="c-tag soft">INJAZ Tunisia</span>
+            <h3>Innovation Camp</h3>
+            <p>Certificat de participation · 29 novembre 2025</p>
+            <button class="view-doc" data-img="assets/certs/cert-injaz-1.jpg" data-title="INJAZ Tunisia — Innovation Camp" data-meta="Certificat de participation · 29/11/2025">Voir le certificat <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+
+        <article class="card cert rv" data-ccat="soft">
+          <img class="doc-thumb" src="assets/certs/cert-leadership.jpg" alt="Certificat The Art of Leadership">
+          <div>
+            <span class="c-tag soft">ISET Sidi Bouzid · Club CDS</span>
+            <h3>The Art of Leadership</h3>
+            <p>Leadership, communication &amp; gestion · 20 novembre 2024</p>
+            <button class="view-doc" data-img="assets/certs/cert-leadership.jpg" data-title="ISET Sidi Bouzid — The Art of Leadership" data-meta="Leadership, communication et gestion stratégique · 20/11/2024">Voir le certificat <i class="fa-solid fa-expand"></i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 class="rv" style="margin-bottom:28px">Contactons-<span>nous</span></h2>
+      <div class="social rv">
+        <a href="https://www.linkedin.com/in/yassin-wannassi-205972323/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i><span><small>LinkedIn</small>Yassin Wannassi</span></a>
+        <a href="https://github.com/yassin-wns" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span><small>GitHub</small>github.com/yassin-wns</span></a>
+        <a href="https://www.instagram.com/yassin_wannassi" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><span><small>Instagram</small>@yassin_wannassi</span></a>
+        <a href="mailto:yassinwannassi01@gmail.com" data-copy="yassinwannassi01@gmail.com"><i class="fa-solid fa-envelope"></i><span><small>Email</small>yassinwannassi01@gmail.com</span></a>
+        <a href="tel:2787677" data-copy="2787677"><i class="fa-solid fa-phone"></i><span><small>Téléphone</small>2787677</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="assets/logo.png" alt="Yassin Wannassi">
+    <p>© 2026 Yassin Wannassi — Fait avec HTML, CSS et JavaScript</p>
+  </footer>
+
+  <!-- Modal aperçu document / projet -->
+  <div id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+    <button class="x" id="cm-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+    <div class="cm-box">
+      <img id="cm-img" src="" alt="">
+      <div class="cm-info">
+        <h3 id="cm-title"></h3>
+        <p id="cm-meta"></p>
+      </div>
+    </div>
+  </div>
+
+  <button id="top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

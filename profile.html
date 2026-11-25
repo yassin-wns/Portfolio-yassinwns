@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>@yassin.wannassi — Profil</title>
+  <meta name="description" content="Galerie et profil de Yassin Wannassi, développeur web full-stack.">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pf-bg"></div>
+  <header class="nav s">
+    <div class="wrap">
+      <a href="index.html" class="brand"><img src="assets/logo-mark.png" alt="Logo YW">Yassin<span class="grad">.</span></a>
+      <nav class="links" style="display:flex"><a href="index.html" class="btn o"><i class="fa-solid fa-arrow-left"></i> Portfolio</a></nav>
+    </div>
+  </header>
+  <main class="pf wrap">
+    <div class="pf-head rv">
+      <div class="av"><img src="assets/photos/p3.jpg" alt="Yassin Wannassi"></div>
+      <div class="pf-info">
+        <h1>yassin_wannassi</h1>
+        <div class="pf-stats">
+          <span><b>9</b> publications</span>
+          <span class="lk"><b id="total">0</b> j’aime</span>
+          <span><b>3</b> projets</span>
+        </div>
+        <b>Yassin Wannassi</b>
+        <p>Développeur Web 💻 · ISET Sidi Bouzid<br>TypeScript · PHP · Angular · Symfony · Java<br>Double-clique sur une photo pour aimer ❤️</p>
+      </div>
+    </div>
+    <div class="pf-grid" id="pgrid"></div>
+  </main>
+
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Aperçu photo">
+    <button class="x" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+    <button class="ar l" aria-label="Photo précédente"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="ar r" aria-label="Photo suivante"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="post">
+      <div class="im" id="im"><img id="limg" alt=""><i class="big fa-solid fa-heart" id="big"></i></div>
+      <aside>
+        <div class="ph"><img src="assets/photos/p3.jpg" alt="Yassin">yassin_wannassi</div>
+        <p class="cap" id="cap"></p>
+        <div class="act">
+          <button class="hrt fa-regular fa-heart" id="hrt" aria-label="J’aime"></button>
+          <p><b id="lc">0 j’aime</b></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
